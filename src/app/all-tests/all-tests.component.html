@@ -1,0 +1,14 @@
+<p>All Tests</p>
+
+<button (click)="showAllTests()">Show All Tests</button>
+
+<table>
+    <tr>
+        <td>Test id</td>
+        <td>Name</td>
+    </tr>
+    <tr *ngFor="let test of tests">
+        <td>{{ test.Id }}</td>
+        <td>{{ test.Name }}</td>
+    </tr>
+</table>

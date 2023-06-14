@@ -1,0 +1,21 @@
+Enter test id: <input #txtTestId type="text" />
+<button (click)="showTest(txtTestId.value)">Show Test</button>
+
+<p>Test Id: {{ test.Id }}</p>
+<p>Name: {{ test.Name }}</p>
+<p>Pass Mark: {{ test.PassMark }}</p>
+
+<table>
+    <tr>
+        <td>Question id</td>
+        <td>Question</td>
+        <td>Options</td>
+        <td>Correct Ans</td>
+    </tr>
+    <tr *ngFor="let question of test.Questions">
+        <td>{{ question.Id }}</td>
+        <td>{{ question.QuestionText }}</td>
+        <td><p *ngFor="let option of question.AnswerOptions">{{ option }}</p></td>
+        <td>{{ question.CorrectAnswer }}</td>
+    </tr>
+</table>
